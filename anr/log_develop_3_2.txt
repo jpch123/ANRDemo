@@ -1,0 +1,62 @@
+主线程等待子线程释放锁 的控制台 anr日志
+03-25 17:46:15.658 1614-1634/? E/ActivityManager: ANR in com.jpc.anr (com.jpc.anr/.developer.DeveloperActivity)
+    PID: 6512
+    Reason: Input dispatching timed out (Waiting to send key event because the focused window has not finished processing all of the input events that were previously delivered to it.  Outbound queue length: 0.  Wait queue length: 1.)
+    Load: 0.0 / 0.0 / 0.0
+    CPU usage from 0ms to 7412ms later (2019-03-25 17:46:08.214 to 2019-03-25 17:46:15.626):
+      101% 6512/com.jpc.anr: 100% user + 0.5% kernel / faults: 692 minor 1 major
+      53% 1614/system_server: 30% user + 23% kernel / faults: 4214 minor 89 major
+      47% 22650/lx.travel.live: 45% user + 2.4% kernel / faults: 704 minor 6 major
+      20% 30240/perfd: 9.6% user + 10% kernel / faults: 365 minor
+      8.7% 651/surfaceflinger: 5% user + 3.7% kernel / faults: 274 minor 1 major
+      7% 1913/adbd: 0.9% user + 6% kernel / faults: 1440 minor 1 major
+      3.7% 3105/com.android.systemui: 3.1% user + 0.6% kernel / faults: 1476 minor 12 major
+      3.2% 3472/com.android.phone: 1.4% user + 1.7% kernel / faults: 933 minor 2 major
+      2.9% 10859/com.sohu.inputmethod.sogou: 2.3% user + 0.6% kernel / faults: 974 minor
+      2.7% 20999/kworker/u16:35: 0% user + 2.7% kernel
+      0.1% 6193/media.codec: 0% user + 0.1% kernel / faults: 1506 minor
+      0.1% 997/media.extractor: 0% user + 0% kernel / faults: 2136 minor
+      2.4% 27298/kworker/u17:0: 0% user + 2.4% kernel
+      2% 3457/com.sec.imsservice: 1.4% user + 0.5% kernel / faults: 1055 minor 4 major
+      1.7% 123/kswapd0: 0% user + 1.7% kernel
+      1.6% 5533/kworker/u16:9: 0% user + 1.6% kernel
+      0% 3445/com.android.nfc: 0% user + 0% kernel / faults: 848 minor 5 major
+      1.4% 20165/kworker/u17:1: 0% user + 1.4% kernel
+      1.3% 401/cfinteractive: 0% user + 1.3% kernel
+      1.3% 540/logd: 0.5% user + 0.8% kernel / faults: 2 minor 5 major
+      1.3% 2942/kworker/u16:0: 0% user + 1.3% kernel
+      1.2% 21004/kworker/u16:39: 0% user + 1.2% kernel
+      0.9% 3972/com.samsung.android.providers.context: 0.8% user + 0.1% kernel / faults: 740 minor 1 major
+      0% 3999/com.qualcomm.qti.services.secureui:sui_service: 0% user + 0% kernel / faults: 769 minor 3 major
+      0.8% 1010/wificond: 0.1% user + 0.6% kernel
+      0.8% 3330/com.android.systemui:InfinityWallpaper: 0.5% user + 0.2% kernel / faults: 775 minor 2 major
+      0% 3707/com.sec.downloadablekeystore: 0% user + 0% kernel / faults: 694 minor 1 major
+      0.8% 5029/mdss_fb0: 0% user + 0.8% kernel
+      0.6% 7/rcu_preempt: 0% user + 0.6% kernel
+      0.6% 80/smem_native_rpm: 0% user + 0.6% kernel
+      0.6% 2863/kworker/0:0: 0% user + 0.6% kernel
+      0% 3967/com.samsung.android.applock: 0% user + 0% kernel / faults: 886 minor 1 major
+      0% 3979/com.samsung.android.softsim: 0% user + 0% kernel / faults: 755 minor 3 major
+      0.6% 5900/com.alibaba.android.rimet: 0.5% user + 0.1% kernel / faults: 2 minor
+      0% 988/cameraserver: 0% user + 0% kernel / faults: 86 minor
+      0% 3431/com.sec.sve: 0% user + 0% kernel / faults: 672 minor 2 major
+      0.5% 5058/com.samsung.android.spay: 0% user + 0.5% kernel / faults: 3 minor
+      0.5% 6874/logcat: 0.5% user + 0% kernel
+      0.4% 1//init: 0.4% user + 0% kernel / faults: 17 minor
+      0.4% 10/rcuop/0: 0% user + 0.4% kernel
+      0.4% 46/rcuop/5: 0% user + 0.4% kernel
+      0.4% 619/android.hardware.graphics.composer@2.1-service: 0.1% user + 0.2% kernel / faults: 7 minor
+      0.4% 622/android.hardware.memtrack@1.0-service: 0.1% user + 0.2% kernel
+      0.4% 4105/com.baidu.map.location: 0.2% user + 0.1% kernel / faults: 18 minor
+      0% 6133/com.android.bluetooth: 0% user + 0% kernel / faults: 203 minor
+      0.4% 24394/wpa_supplicant: 0.1% user + 0.2% kernel / faults: 1 minor
+      0.2% 39/rcuop/4: 0% user + 0.2% kernel
+      0.2% 53/rcuop/6: 0% user + 0.2% kernel
+      0.2% 194/hwrng: 0% user + 0.2% kernel
+      0.2% 541/servicemanager: 0.1% user + 0.1% kernel
+      0% 983/zygote64: 0% user + 0% kernel / faults: 47 minor
+      0% 984/zygote: 0% user + 0% kernel / faults: 36 minor
+      0% 999/mediaserver: 0% user + 0% kernel / faults: 106 minor 3 major
+      0% 1005/remotedisplay: 0% user + 0% kernel / faults: 63 minor
+      0% 1115/tombstoned: 0% user + 0% kernel / faults: 24 minor
+      0.2% 3549/iod: 0.1% user + 0

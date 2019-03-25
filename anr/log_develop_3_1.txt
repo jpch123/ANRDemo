@@ -1,0 +1,59 @@
+主线程等待子线程释放锁 的控制台 anr日志
+03-25 17:30:19.379 1614-1634/? E/ActivityManager: ANR in com.jpc.anr (com.jpc.anr/.developer.DeveloperActivity)
+    PID: 25121
+    Reason: Input dispatching timed out (Waiting to send non-key event because the touched window has not finished processing certain input events that were delivered to it over 500.0ms ago.  Wait queue length: 2.  Wait queue head age: 28285.5ms.)
+    Load: 0.0 / 0.11 / 0.1
+    CPU usage from 164ms to -12075ms ago (2019-03-25 17:30:07.083 to 2019-03-25 17:30:19.322):
+      100% 25121/com.jpc.anr: 99% user + 0.4% kernel / faults: 1429 minor 111 major
+      57% 1614/system_server: 32% user + 25% kernel / faults: 30845 minor 19010 major
+      34% 22650/lx.travel.live: 31% user + 2.9% kernel / faults: 2475 minor 175 major
+      17% 21742/perfd: 8.7% user + 8.7% kernel / faults: 663 minor
+      10% 123/kswapd0: 0% user + 10% kernel
+      6.5% 651/surfaceflinger: 3.6% user + 2.8% kernel / faults: 333 minor 25 major
+      5.7% 1913/adbd: 1.6% user + 4.1% kernel / faults: 2273 minor 1 major
+      5.3% 5900/com.alibaba.android.rimet: 4.4% user + 0.8% kernel / faults: 2727 minor 243 major
+      2.5% 89/kcompactd0: 0% user + 2.5% kernel
+      2.9% 20992/kworker/u16:30: 0% user + 2.9% kernel
+      1.8% 20999/kworker/u16:35: 0% user + 1.8% kernel
+      2.7% 3105/com.android.systemui: 1.7% user + 1% kernel / faults: 2456 minor 1221 major
+      2.6% 3472/com.android.phone: 1.4% user + 1.2% kernel / faults: 1882 minor 1256 major
+      2.5% 10859/com.sohu.inputmethod.sogou: 1.6% user + 0.8% kernel / faults: 1446 minor 1040 major
+      2.3% 21003/kworker/u16:38: 0% user + 2.3% kernel
+      2% 20998/kworker/u16:34: 0% user + 2% kernel
+      1.8% 4105/com.baidu.map.location: 0.9% user + 0.8% kernel / faults: 1645 minor 670 major
+      0% 6193/media.codec: 0% user + 0% kernel / faults: 1705 minor 193 major
+      1.7% 3457/com.sec.imsservice: 1.2% user + 0.5% kernel / faults: 1920 minor 774 major
+      1.7% 20165/kworker/u17:1: 0% user + 1.7% kernel
+      0% 997/media.extractor: 0% user + 0% kernel / faults: 2182 minor 146 major
+      0.5% 20995/kworker/u16:32: 0% user + 0.5% kernel
+      1.4% 80/smem_native_rpm: 0% user + 1.4% kernel
+      1.3% 27298/kworker/u17:0: 0% user + 1.3% kernel
+      1.2% 401/cfinteractive: 0% user + 1.2% kernel
+      1.2% 30120/com.tencent.mm: 0.4% user + 0.8% kernel / faults: 878 minor 564 major
+      0.9% 540/logd: 0.2% user + 0.7% kernel / faults: 46 minor 39 major
+      0.1% 3445/com.android.nfc: 0% user + 0% kernel / faults: 2279 minor 639 major
+      0.1% 3967/com.samsung.android.applock: 0% user + 0% kernel / faults: 1546 minor 471 major
+      0.8% 1010/wificond: 0% user + 0.8% kernel / faults: 9 minor
+      0.1% 16305/com.tencent.mm:push: 0% user + 0.1% kernel / faults: 1979 minor 374 major
+      0.3% 3972/com.samsung.android.providers.context: 0.1% user + 0.1% kernel / faults: 1362 minor 507 major
+      0.6% 622/android.hardware.memtrack@1.0-service: 0.2% user + 0.4% kernel / faults: 6 minor
+      0.1% 3979/com.samsung.android.softsim: 0% user + 0% kernel / faults: 1523 minor 510 major
+      0% 3999/com.qualcomm.qti.services.secureui:sui_service: 0% user + 0% kernel / faults: 1704 minor 635 major
+      0.2% 3330/com.android.systemui:InfinityWallpaper: 0.1% user + 0% kernel / faults: 1649 minor 377 major
+      0% 3431/com.sec.sve: 0% user + 0% kernel / faults: 1709 minor 604 major
+      0.5% 9748/kworker/0:2: 0% user + 0.5% kernel
+      0.4% 7/rcu_preempt: 0% user + 0.4% kernel
+      0% 3707/com.sec.downloadablekeystore: 0% user + 0% kernel / faults: 1421 minor 520 major
+      0.4% 541/servicemanager: 0.1% user + 0.2% kernel
+      0.4% 21000/kworker/u16:36: 0% user + 0.4% kernel
+      0.4% 22116/logcat: 0.2% user + 0.1% kernel / faults: 5 minor 1 major
+      0.3% 10/rcuop/0: 0% user + 0.3% kernel
+      0.3% 25/rcuop/2: 0% user + 0.3% kernel
+      0.2% 18/rcuop/1: 0% user + 0.2% kernel
+      0.2% 39/rcuop/4: 0% user + 0.2% kernel
+      0.2% 194/hwrng: 0% user + 0.2% kernel
+      0% 988/cameraserver: 0% user + 0% kernel / faults: 144 minor 160 major
+      0.2% 3641/irq/22-1008000.: 0% user + 0.2% kernel
+      0% 6133/com.android.bluetooth: 0% user + 0% kernel / faults: 874 minor 290 major
+      0.2% 21133/mdss_fb0: 0% user + 0.2% kernel
+      0.2% 24394/wpa_supplicant: 0% user + 0.2% kernel / faults: 40 minor

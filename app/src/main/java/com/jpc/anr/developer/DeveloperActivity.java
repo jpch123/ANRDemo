@@ -23,6 +23,8 @@ public class DeveloperActivity extends AppCompatActivity {
     Button btn_2;
     Button btn_3;
     Button btn_4;
+    Button btn_5;
+    Button btn_6;
     Activity mActivity;
 
     @Override
@@ -39,6 +41,11 @@ public class DeveloperActivity extends AppCompatActivity {
         btn_3.setOnClickListener(mClickListener);
         btn_4 = findViewById(R.id.btn_4);
         btn_4.setOnClickListener(mClickListener);
+
+        btn_5 = findViewById(R.id.btn_5);
+        btn_5.setOnClickListener(mClickListener);
+        btn_6 = findViewById(R.id.btn_6);
+        btn_6.setOnClickListener(mClickListener);
     }
 
     View.OnClickListener mClickListener = new View.OnClickListener() {
@@ -74,28 +81,60 @@ public class DeveloperActivity extends AppCompatActivity {
                         }
                     }.start();
                     break;
+                case R.id.btn_5:
+                    // The worker thread holds a lock on lockedResource
+                    new LockTask().execute();
+                    try {
+                        Thread.sleep(10); //保证异步任务已经开始
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    synchronized (lockedResource) {
+                        // The main thread requires lockedResource here
+                        // but it has to wait until LockTask finishes using it.
+                        Toast.makeText(mActivity, "哈哈", Toast.LENGTH_SHORT).show();
+                    }
+                    break;
+                case R.id.btn_6:
+
+                    WaitTask waitTask = new WaitTask();
+                    synchronized (waitTask) {
+                        try {
+                            waitTask.execute();
+                            // Wait for this worker thread’s notification
+                            waitTask.wait();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    Toast.makeText(mActivity, "哈哈11", Toast.LENGTH_SHORT).show();
+                    break;
             }
         }
     };
 
+    private Object lockedResource = new Object();
 
-    public void print() {
-        BufferedReader bufferedReader = null;
-        String tmp = null;
-        try {
-            bufferedReader = new BufferedReader(new FileReader(new File(Environment.getExternalStorageDirectory() + "/123.txt")));
-            while ((tmp = bufferedReader.readLine()) != null) {
-                Log.i("DeveloperActivity", tmp);
+    public class LockTask extends AsyncTask<Void, Void, Void> {
+        @Override
+        protected Void doInBackground(Void... params) {
+            synchronized (lockedResource) {
+                // This is a long-running operation, which makes
+                // the lock last for a long time
+                BubbleSort.sort(20);
+                return null;
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (bufferedReader != null) {
-                try {
-                    bufferedReader.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+        }
+    }
+
+    class WaitTask extends AsyncTask<Void, Void, Void> {
+        @Override
+        protected Void doInBackground(Void... params) {
+            synchronized (this) {
+                BubbleSort.sort(20);
+                // Finished, notify the main thread
+                notify();
+                return null;
             }
         }
     }

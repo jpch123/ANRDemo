@@ -1,0 +1,60 @@
+
+主线程有耗时操作的控制台 anr日志
+03-25 13:41:04.871 1614-1634/? E/ActivityManager: ANR in com.jpc.anr (com.jpc.anr/.developer.DeveloperActivity)
+    PID: 17669
+    Reason: Input dispatching timed out (Waiting to send key event because the focused window has not finished processing all of the input events that were previously delivered to it.  Outbound queue length: 0.  Wait queue length: 1.)
+    Load: 0.0 / 0.0 / 0.0
+    CPU usage from 0ms to 13555ms later (2019-03-25 13:40:51.258 to 2019-03-25 13:41:04.813):
+      72% 17669/com.jpc.anr: 70% user + 1.9% kernel / faults: 3581 minor 191 major
+      28% 1614/system_server: 16% user + 12% kernel / faults: 5253 minor 1612 major
+      8.7% 123/kswapd0: 0% user + 8.7% kernel
+      5.7% 10023/kworker/u16:12: 0% user + 5.7% kernel
+      5.4% 6426/com.alibaba.android.rimet: 3.4% user + 1.9% kernel / faults: 2017 minor 850 major
+      4.3% 10859/com.sohu.inputmethod.sogou: 2.6% user + 1.6% kernel / faults: 2048 minor 520 major
+      3.9% 1300/com.tencent.mtt:WeApp01: 2.2% user + 1.6% kernel / faults: 823 minor
+      3.6% 3472/com.android.phone: 1.7% user + 1.9% kernel / faults: 1647 minor 1325 major
+      3.5% 3105/com.android.systemui: 2.2% user + 1.2% kernel / faults: 1800 minor 1144 major
+      3.2% 89/kcompactd0: 0% user + 3.2% kernel
+      0% 6193/media.codec: 0% user + 0% kernel / faults: 1640 minor 152 major
+      2.8% 10036/kworker/u16:19: 0% user + 2.8% kernel
+      2.5% 16646/kworker/u16:3: 0% user + 2.5% kernel
+      2.5% 10025/kworker/u16:13: 0% user + 2.5% kernel
+      2.5% 16666/kworker/u16:6: 0% user + 2.5% kernel
+      0% 997/media.extractor: 0% user + 0% kernel / faults: 2149 minor 148 major
+      2.3% 3457/com.sec.imsservice: 1.3% user + 1% kernel / faults: 1161 minor 595 major
+      1.9% 651/surfaceflinger: 0.8% user + 1.1% kernel / faults: 499 minor 20 major
+      1.9% 16647/kworker/u16:5: 0% user + 1.9% kernel
+      1.6% 1913/adbd: 0.3% user + 1.2% kernel / faults: 980 minor
+      1.5% 80/smem_native_rpm: 0% user + 1.5% kernel
+      1.5% 3445/com.android.nfc: 0.8% user + 0.7% kernel / faults: 1414 minor 605 major
+      1.4% 3999/com.qualcomm.qti.services.secureui:sui_service: 0.5% user + 0.9% kernel / faults: 1285 minor 573 major
+      0% 3431/com.sec.sve: 0% user + 0% kernel / faults: 1489 minor 616 major
+      1.3% 401/cfinteractive: 0% user + 1.3% kernel
+      1.3% 3972/com.samsung.android.providers.context: 0.7% user + 0.5% kernel / faults: 1228 minor 528 major
+      1.2% 3330/com.android.systemui:InfinityWallpaper: 0.5% user + 0.6% kernel / faults: 1376 minor 495 major
+      1.1% 619/android.hardware.graphics.composer@2.1-service: 0.8% user + 0.2% kernel / faults: 124 minor 1 major
+      0% 3979/com.samsung.android.softsim: 0% user + 0% kernel / faults: 1746 minor 665 major
+      0.9% 3967/com.samsung.android.applock: 0.4% user + 0.5% kernel / faults: 1328 minor 442 major
+      0.8% 10068/kworker/u16:40: 0% user + 0.8% kernel
+      0.8% 540/logd: 0.1% user + 0.6% kernel / faults: 490 minor 167 major
+      0% 3707/com.sec.downloadablekeystore: 0% user + 0% kernel / faults: 1462 minor 584 major
+      0.5% 7/rcu_preempt: 0% user + 0.5% kernel
+      0.3% 987/audioserver: 0% user + 0.2% kernel / faults: 90 minor 71 major
+      0.3% 7251/com.tencent.mm: 0.2% user + 0.1% kernel / faults: 388 minor 11 major
+      0% 988/cameraserver: 0% user + 0% kernel / faults: 136 minor 154 major
+      0% 1115/tombstoned: 0% user + 0% kernel / faults: 67 minor 47 major
+      0.2% 13181/mdss_fb0: 0% user + 0.2% kernel
+      0.2% 15926/logcat: 0% user + 0.2% kernel / faults: 16 minor
+      0.2% 1//init: 0% user + 0.1% kernel / faults: 194 minor 21 major
+      0.2% 10/rcuop/0: 0% user + 0.2% kernel
+      0.2% 25/rcuop/2: 0% user + 0.2% kernel
+      0.2% 5690/kworker/u17:1: 0% user + 0.2% kernel
+      0.2% 6133/com.android.bluetooth: 0% user + 0.2% kernel / faults: 243 minor 160 major
+      0.2% 9314/com.tencent.mobileqq:MSF: 0.1% user + 0% kernel / faults: 91 minor 11 major
+      0.2% 10137/kworker/u17:0: 0% user + 0.2% kernel
+      0.1% 18/rcuop/1: 0% user + 0.1% kernel
+      0.1% 46/rcuop/5: 0% user + 0.1% kernel
+      0.1% 983/zygote64: 0% user + 0.1% kernel / faults: 47 minor 11 major
+      0.1% 984/zygote: 0% user + 0.1% kernel / faults: 62 minor 10 major
+      0% 989/drmserver: 0% user + 0% kernel / faults: 203 minor 115 major
+      0
