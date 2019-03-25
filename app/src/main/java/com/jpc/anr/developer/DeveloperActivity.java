@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.jpc.anr.R;
 
@@ -20,6 +21,8 @@ import java.io.IOException;
 public class DeveloperActivity extends AppCompatActivity {
     Button btn_1;
     Button btn_2;
+    Button btn_3;
+    Button btn_4;
     Activity mActivity;
 
     @Override
@@ -31,6 +34,11 @@ public class DeveloperActivity extends AppCompatActivity {
         btn_1.setOnClickListener(mClickListener);
         btn_2 = findViewById(R.id.btn_2);
         btn_2.setOnClickListener(mClickListener);
+
+        btn_3 = findViewById(R.id.btn_3);
+        btn_3.setOnClickListener(mClickListener);
+        btn_4 = findViewById(R.id.btn_4);
+        btn_4.setOnClickListener(mClickListener);
     }
 
     View.OnClickListener mClickListener = new View.OnClickListener() {
@@ -53,6 +61,19 @@ public class DeveloperActivity extends AppCompatActivity {
                     }.execute();
                     Debug.stopMethodTracing();
                     break;
+
+                case R.id.btn_3:
+                    ReadFile.getFromAssets(mActivity, "123.txt");
+                    break;
+                case R.id.btn_4:
+
+                    new Thread("readFile") {
+                        @Override
+                        public void run() {
+                            ReadFile.getFromAssets(mActivity, "123.txt");
+                        }
+                    }.start();
+                    break;
             }
         }
     };
@@ -64,7 +85,7 @@ public class DeveloperActivity extends AppCompatActivity {
         try {
             bufferedReader = new BufferedReader(new FileReader(new File(Environment.getExternalStorageDirectory() + "/123.txt")));
             while ((tmp = bufferedReader.readLine()) != null) {
-                Log.i("wangchen", tmp);
+                Log.i("DeveloperActivity", tmp);
             }
         } catch (IOException e) {
             e.printStackTrace();
