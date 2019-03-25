@@ -1,52 +1,57 @@
-package com.jpc.anr;
+package com.jpc.anr.developer;
 
 import android.app.Activity;
-import android.content.Intent;
-import android.os.Environment;
-import android.os.SystemClock;
-import android.support.v7.app.AppCompatActivity;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Debug;
+import android.os.Environment;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.jpc.anr.developer.DeveloperActivity;
+import com.jpc.anr.R;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class MainActivity extends AppCompatActivity {
-    Button openAnrTestActivity;
-    Button openDeveloperActivity;
+public class DeveloperActivity extends AppCompatActivity {
+    Button btn_1;
+    Button btn_2;
     Activity mActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mActivity = this;
-        setContentView(R.layout.activity_main);
-        openAnrTestActivity = findViewById(R.id.openAnrTestActivity);
-        openAnrTestActivity.setOnClickListener(mClickListener);
-        openDeveloperActivity = findViewById(R.id.openDeveloperActivity);
-        openDeveloperActivity.setOnClickListener(mClickListener);
-
+        setContentView(R.layout.activity_developer);
+        btn_1 = findViewById(R.id.btn_1);
+        btn_1.setOnClickListener(mClickListener);
+        btn_2 = findViewById(R.id.btn_2);
+        btn_2.setOnClickListener(mClickListener);
     }
 
     View.OnClickListener mClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             switch (v.getId()) {
-                case R.id.openAnrTestActivity:
-                    print();
-//                    SystemClock.sleep(20*1000);
-//                    Intent intent = new Intent(mActivity, ANRTestAct.class);
-//                    startActivity(intent);
+                case R.id.btn_1:
+                    Debug.startMethodTracing("anrjpc");
+                    BubbleSort.sort(1.05f);
+                    Debug.stopMethodTracing();
                     break;
-                case R.id.openDeveloperActivity:
-                    Intent intent2 = new Intent(mActivity, DeveloperActivity.class);
-                    startActivity(intent2);
+                case R.id.btn_2:
+                    Debug.startMethodTracing("anrjpcAsync");
+                    new AsyncTask<Void, Void, Void>() {
+                        @Override
+                        protected Void doInBackground(Void... params) {
+                            BubbleSort.sort(2);
+                            return null;
+                        }
+                    }.execute();
+                    Debug.stopMethodTracing();
                     break;
             }
         }

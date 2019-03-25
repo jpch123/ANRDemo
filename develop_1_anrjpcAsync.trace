@@ -1,0 +1,217 @@
+*version
+3
+data-file-overflow=false
+clock=dual
+elapsed-time-usec=78923
+num-method-calls=478
+clock-call-overhead-nsec=1523
+vm=art
+pid=17005
+*threads
+17005	main
+17010	Jit thread pool worker thread 0
+17011	Signal Catcher
+17012	JDWP
+17014	FinalizerDaemon
+17013	ReferenceQueueDaemon
+17015	FinalizerWatchdogDaemon
+17016	HeapTaskDaemon
+17017	Binder:17005_1
+17018	Binder:17005_2
+17022	HwBinder:17005_1
+17049	Profile Saver
+17055	Thread-6
+17107	RenderThread
+17162	hwuiTask2
+17161	hwuiTask1
+17284	Binder:17005_3
+17315	Thread-8
+17375	JVMTI Agent thread
+17376	JVMTI Agent thread
+17374	Thread-11
+18284	queued-work-looper
+18854	<native thread without managed peer>
+*methods
+0x254	java.lang.ThreadGroup	add	(Ljava/lang/Thread;)V	ThreadGroup.java
+0x1f0	java.lang.ThreadGroup	addUnstarted	()V	ThreadGroup.java
+0x3c	java.util.concurrent.LinkedBlockingQueue	<init>	(I)V	LinkedBlockingQueue.java
+0x1e8	java.lang.Thread$State	values	()[Ljava/lang/Thread$State;	Thread.java
+0x98	java.util.AbstractMap	<init>	()V	AbstractMap.java
+0x94	java.util.HashMap	<init>	()V	HashMap.java
+0x224	java.util.HashMap	hash	(Ljava/lang/Object;)I	HashMap.java
+0x244	java.util.HashMap	afterNodeInsertion	(Z)V	HashMap.java
+0xcc	java.util.HashMap	keySet	()Ljava/util/Set;	HashMap.java
+0x23c	java.util.HashMap	newNode	(ILjava/lang/Object;Ljava/lang/Object;Ljava/util/HashMap$Node;)Ljava/util/HashMap$Node;	HashMap.java
+0x220	java.util.HashMap	put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;	HashMap.java
+0x234	java.util.HashMap	putVal	(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;	HashMap.java
+0x238	java.util.HashMap	resize	()[Ljava/util/HashMap$Node;	HashMap.java
+0x24c	java.util.HashMap	size	()I	HashMap.java
+0x58	java.util.concurrent.locks.AbstractQueuedSynchronizer	<init>	()V	AbstractQueuedSynchronizer.java
+0xb8	java.util.concurrent.locks.AbstractQueuedSynchronizer	compareAndSetState	(II)Z	AbstractQueuedSynchronizer.java
+0xf0	java.util.concurrent.locks.AbstractQueuedSynchronizer	getState	()I	AbstractQueuedSynchronizer.java
+0xe8	java.util.concurrent.locks.AbstractQueuedSynchronizer	release	(I)Z	AbstractQueuedSynchronizer.java
+0xf8	java.util.concurrent.locks.AbstractQueuedSynchronizer	setState	(I)V	AbstractQueuedSynchronizer.java
+0x38	java.lang.Number	<init>	()V	Number.java
+0x240	java.util.HashMap$Node	<init>	(ILjava/lang/Object;Ljava/lang/Object;Ljava/util/HashMap$Node;)V	HashMap.java
+0x54	java.util.concurrent.locks.ReentrantLock$Sync	<init>	()V	ReentrantLock.java
+0x64	java.util.concurrent.locks.ReentrantLock$Sync	newCondition	()Ljava/util/concurrent/locks/AbstractQueuedSynchronizer$ConditionObject;	ReentrantLock.java
+0xec	java.util.concurrent.locks.ReentrantLock$Sync	tryRelease	(I)Z	ReentrantLock.java
+0x7c	java.util.concurrent.ThreadPoolExecutor	<init>	(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V	ThreadPoolExecutor.java
+0x80	java.util.concurrent.ThreadPoolExecutor	<init>	(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;Ljava/util/concurrent/RejectedExecutionHandler;)V	ThreadPoolExecutor.java
+0x178	java.util.concurrent.ThreadPoolExecutor	addWorker	(Ljava/lang/Runnable;Z)Z	ThreadPoolExecutor.java
+0x180	java.util.concurrent.ThreadPoolExecutor	compareAndIncrementWorkerCount	(I)Z	ThreadPoolExecutor.java
+0x88	java.util.concurrent.ThreadPoolExecutor	ctlOf	(II)I	ThreadPoolExecutor.java
+0xa8	java.util.concurrent.ThreadPoolExecutor	interruptIdleWorkers	()V	ThreadPoolExecutor.java
+0xac	java.util.concurrent.ThreadPoolExecutor	interruptIdleWorkers	(Z)V	ThreadPoolExecutor.java
+0x17c	java.util.concurrent.ThreadPoolExecutor	runStateOf	(I)I	ThreadPoolExecutor.java
+0x174	java.util.concurrent.ThreadPoolExecutor	workerCountOf	(I)I	ThreadPoolExecutor.java
+0xa4	java.util.concurrent.ThreadPoolExecutor	allowCoreThreadTimeOut	(Z)V	ThreadPoolExecutor.java
+0x16c	java.util.concurrent.ThreadPoolExecutor	execute	(Ljava/lang/Runnable;)V	ThreadPoolExecutor.java
+0x18c	java.util.concurrent.ThreadPoolExecutor	getThreadFactory	()Ljava/util/concurrent/ThreadFactory;	ThreadPoolExecutor.java
+0x50	java.util.concurrent.locks.ReentrantLock$NonfairSync	<init>	()V	ReentrantLock.java
+0xb4	java.util.concurrent.locks.ReentrantLock$NonfairSync	lock	()V	ReentrantLock.java
+0x48	java.util.concurrent.atomic.AtomicInteger	<init>	()V	AtomicInteger.java
+0x34	java.util.concurrent.atomic.AtomicInteger	<init>	(I)V	AtomicInteger.java
+0x184	java.util.concurrent.atomic.AtomicInteger	compareAndSet	(II)Z	AtomicInteger.java
+0x170	java.util.concurrent.atomic.AtomicInteger	get	()I	AtomicInteger.java
+0x1b4	java.util.concurrent.atomic.AtomicInteger	getAndIncrement	()I	AtomicInteger.java
+0x210	java.security.AccessController	getContext	()Ljava/security/AccessControlContext;	AccessController.java
+0xd8	java.util.HashMap$KeyIterator	<init>	(Ljava/util/HashMap;)V	HashMap.java
+0x6c	java.util.concurrent.LinkedBlockingQueue$Node	<init>	(Ljava/lang/Object;)V	LinkedBlockingQueue.java
+0x68	java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject	<init>	(Ljava/util/concurrent/locks/AbstractQueuedSynchronizer;)V	AbstractQueuedSynchronizer.java
+0x5c	java.util.concurrent.locks.AbstractOwnableSynchronizer	<init>	()V	AbstractOwnableSynchronizer.java
+0xf4	java.util.concurrent.locks.AbstractOwnableSynchronizer	getExclusiveOwnerThread	()Ljava/lang/Thread;	AbstractOwnableSynchronizer.java
+0xc4	java.util.concurrent.locks.AbstractOwnableSynchronizer	setExclusiveOwnerThread	(Ljava/lang/Thread;)V	AbstractOwnableSynchronizer.java
+0x198	java.lang.AbstractStringBuilder	<init>	(I)V	AbstractStringBuilder.java
+0x1a8	java.lang.AbstractStringBuilder	ensureCapacityInternal	(I)V	AbstractStringBuilder.java
+0x1c4	java.lang.AbstractStringBuilder	append	(I)Ljava/lang/AbstractStringBuilder;	AbstractStringBuilder.java
+0x1a0	java.lang.AbstractStringBuilder	append	(Ljava/lang/String;)Ljava/lang/AbstractStringBuilder;	AbstractStringBuilder.java
+0x4c	java.util.concurrent.locks.ReentrantLock	<init>	()V	ReentrantLock.java
+0xb0	java.util.concurrent.locks.ReentrantLock	lock	()V	ReentrantLock.java
+0x60	java.util.concurrent.locks.ReentrantLock	newCondition	()Ljava/util/concurrent/locks/Condition;	ReentrantLock.java
+0xe4	java.util.concurrent.locks.ReentrantLock	unlock	()V	ReentrantLock.java
+0xdc	java.util.HashMap$HashIterator	<init>	(Ljava/util/HashMap;)V	HashMap.java
+0xe0	java.util.HashMap$HashIterator	hasNext	()Z	HashMap.java
+0x194	java.lang.StringBuilder	<init>	()V	StringBuilder.java
+0x1c0	java.lang.StringBuilder	append	(I)Ljava/lang/StringBuilder;	StringBuilder.java
+0x19c	java.lang.StringBuilder	append	(Ljava/lang/String;)Ljava/lang/StringBuilder;	StringBuilder.java
+0x1d0	java.lang.StringBuilder	toString	()Ljava/lang/String;	StringBuilder.java
+0x9c	java.util.concurrent.TimeUnit$4	toNanos	(J)J	TimeUnit.java
+0x44	java.util.AbstractCollection	<init>	()V	AbstractCollection.java
+0xa0	java.util.concurrent.TimeUnit	x	(JJJ)J	TimeUnit.java
+0x1cc	java.lang.Integer	getChars	(II[C)V	Integer.java
+0x1c8	java.lang.Integer	stringSize	(I)I	Integer.java
+0x90	java.util.AbstractSet	<init>	()V	AbstractSet.java
+0x8c	java.util.HashSet	<init>	()V	HashSet.java
+0x21c	java.util.HashSet	add	(Ljava/lang/Object;)Z	HashSet.java
+0xc8	java.util.HashSet	iterator	()Ljava/util/Iterator;	HashSet.java
+0x248	java.util.HashSet	size	()I	HashSet.java
+0x40	java.util.AbstractQueue	<init>	()V	AbstractQueue.java
+0x104	java.util.ArrayDeque	<init>	()V	ArrayDeque.java
+0x15c	java.util.ArrayDeque	addLast	(Ljava/lang/Object;)V	ArrayDeque.java
+0x154	java.util.ArrayDeque	offer	(Ljava/lang/Object;)Z	ArrayDeque.java
+0x158	java.util.ArrayDeque	offerLast	(Ljava/lang/Object;)Z	ArrayDeque.java
+0x164	java.util.ArrayDeque	poll	()Ljava/lang/Object;	ArrayDeque.java
+0x168	java.util.ArrayDeque	pollFirst	()Ljava/lang/Object;	ArrayDeque.java
+0x114	java.util.concurrent.atomic.AtomicBoolean	<init>	()V	AtomicBoolean.java
+0x13c	java.util.concurrent.FutureTask	<init>	(Ljava/util/concurrent/Callable;)V	FutureTask.java
+0x214	java.security.AccessControlContext	<init>	([Ljava/security/ProtectionDomain;)V	AccessControlContext.java
+0xd0	java.util.HashMap$KeySet	<init>	(Ljava/util/HashMap;)V	HashMap.java
+0xd4	java.util.HashMap$KeySet	iterator	()Ljava/util/Iterator;	HashMap.java
+0x84	java.util.concurrent.AbstractExecutorService	<init>	()V	AbstractExecutorService.java
+0x188	java.util.concurrent.ThreadPoolExecutor$Worker	<init>	(Ljava/util/concurrent/ThreadPoolExecutor;Ljava/lang/Runnable;)V	ThreadPoolExecutor.java
+0x30	java.lang.Object	<init>	()V	Object.java
+0x22c	java.lang.Object	identityHashCode	(Ljava/lang/Object;)I	Object.java
+0x230	java.lang.Object	identityHashCodeNative	(Ljava/lang/Object;)I	Object.java
+0x228	java.lang.Object	hashCode	()I	Object.java
+0x1ac	java.lang.String	getChars	(II[CI)V	String.java
+0x1b0	java.lang.String	getCharsNoCheck	(II[CI)V	String.java
+0x1a4	java.lang.String	length	()I	String.java
+0x1d8	java.lang.Thread	<init>	(Ljava/lang/Runnable;Ljava/lang/String;)V	Thread.java
+0xc0	java.lang.Thread	currentThread	()Ljava/lang/Thread;	Thread.java
+0x1dc	java.lang.Thread	init	(Ljava/lang/ThreadGroup;Ljava/lang/Runnable;Ljava/lang/String;J)V	Thread.java
+0x208	java.lang.Thread	init2	(Ljava/lang/Thread;)V	Thread.java
+0x258	java.lang.Thread	nativeCreate	(Ljava/lang/Thread;JZ)V	Thread.java
+0x1ec	java.lang.Thread	nativeGetStatus	(Z)I	Thread.java
+0x218	java.lang.Thread	nextThreadID	()J	Thread.java
+0x200	java.lang.Thread	checkAccess	()V	Thread.java
+0x20c	java.lang.Thread	getContextClassLoader	()Ljava/lang/ClassLoader;	Thread.java
+0x1f4	java.lang.Thread	getPriority	()I	Thread.java
+0x1e4	java.lang.Thread	getState	()Ljava/lang/Thread$State;	Thread.java
+0x1e0	java.lang.Thread	getThreadGroup	()Ljava/lang/ThreadGroup;	Thread.java
+0x204	java.lang.Thread	isAlive	()Z	Thread.java
+0x1f8	java.lang.Thread	isDaemon	()Z	Thread.java
+0x1fc	java.lang.Thread	setName	(Ljava/lang/String;)V	Thread.java
+0x250	java.lang.Thread	start	()V	Thread.java
+0x78	java.lang.ref.Reference	<init>	(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V	Reference.java
+0x14	java.lang.Runtime	getRuntime	()Ljava/lang/Runtime;	Runtime.java
+0x18	java.lang.Runtime	availableProcessors	()I	Runtime.java
+0xbc	sun.misc.Unsafe	compareAndSwapInt	(Ljava/lang/Object;JII)Z	Unsafe.java
+0x1b8	sun.misc.Unsafe	getAndAddInt	(Ljava/lang/Object;JI)I	Unsafe.java
+0x1bc	sun.misc.Unsafe	getIntVolatile	(Ljava/lang/Object;J)I	Unsafe.java
+0x28	java.lang.Math	max	(II)I	Math.java
+0x24	java.lang.Math	min	(II)I	Math.java
+0x1c	libcore.io.ForwardingOs	sysconf	(I)J	ForwardingOs.java
+0x1d4	java.lang.StringFactory	newStringFromChars	(II[C)Ljava/lang/String;	StringFactory.java
+0x20	libcore.io.Linux	sysconf	(I)J	Linux.java
+0x4	dalvik.system.VMDebug	startMethodTracing	(Ljava/lang/String;IIZI)V	VMDebug.java
+0	dalvik.system.VMDebug	startMethodTracingFilename	(Ljava/lang/String;IIZI)V	VMDebug.java
+0x260	dalvik.system.VMDebug	stopMethodTracing	()V	VMDebug.java
+0x74	java.lang.ref.FinalizerReference	<init>	(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V	FinalizerReference.java
+0x70	java.lang.ref.FinalizerReference	add	(Ljava/lang/Object;)V	FinalizerReference.java
+0x150	android.os.AsyncTask$SerialExecutor$1	<init>	(Landroid/os/AsyncTask$SerialExecutor;Ljava/lang/Runnable;)V	AsyncTask.java
+0x100	android.os.AsyncTask$SerialExecutor	<init>	()V	AsyncTask.java
+0xfc	android.os.AsyncTask$SerialExecutor	<init>	(Landroid/os/AsyncTask$SerialExecutor;)V	AsyncTask.java
+0x14c	android.os.AsyncTask$SerialExecutor	execute	(Ljava/lang/Runnable;)V	AsyncTask.java
+0x160	android.os.AsyncTask$SerialExecutor	scheduleNext	()V	AsyncTask.java
+0x134	android.os.AsyncTask$WorkerRunnable	<init>	()V	AsyncTask.java
+0x130	android.os.AsyncTask$WorkerRunnable	<init>	(Landroid/os/AsyncTask$WorkerRunnable;)V	AsyncTask.java
+0x120	android.os.AsyncTask$InternalHandler	<init>	(Landroid/os/Looper;)V	AsyncTask.java
+0x2c	android.os.AsyncTask$1	<init>	()V	AsyncTask.java
+0x190	android.os.AsyncTask$1	newThread	(Ljava/lang/Runnable;)Ljava/lang/Thread;	AsyncTask.java
+0x12c	android.os.AsyncTask$2	<init>	(Landroid/os/AsyncTask;)V	AsyncTask.java
+0x138	android.os.AsyncTask$3	<init>	(Landroid/os/AsyncTask;Ljava/util/concurrent/Callable;)V	AsyncTask.java
+0x124	android.os.Handler	<init>	(Landroid/os/Looper;)V	Handler.java
+0x128	android.os.Handler	<init>	(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V	Handler.java
+0x11c	android.os.Looper	getMainLooper	()Landroid/os/Looper;	Looper.java
+0xc	android.os.Debug	startMethodTracing	(Ljava/lang/String;)V	Debug.java
+0x8	android.os.Debug	startMethodTracing	(Ljava/lang/String;II)V	Debug.java
+0x25c	android.os.Debug	stopMethodTracing	()V	Debug.java
+0x10	android.os.AsyncTask	<clinit>	()V	AsyncTask.java
+0x10c	android.os.AsyncTask	<init>	()V	AsyncTask.java
+0x110	android.os.AsyncTask	<init>	(Landroid/os/Looper;)V	AsyncTask.java
+0x118	android.os.AsyncTask	getMainHandler	()Landroid/os/Handler;	AsyncTask.java
+0x140	android.os.AsyncTask	execute	([Ljava/lang/Object;)Landroid/os/AsyncTask;	AsyncTask.java
+0x144	android.os.AsyncTask	executeOnExecutor	(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;	AsyncTask.java
+0x148	android.os.AsyncTask	onPreExecute	()V	AsyncTask.java
+0x108	com.jpc.anr.developer.DeveloperActivity$1$1	<init>	(Lcom/jpc/anr/developer/DeveloperActivity$1;)V	DeveloperActivity.java
+*end
+SLOW   úÙo                 mB       Òˆ  mB      	˜  mB	   "   ˜  mB   (   ˜  mB   ˘  P mB     d mB     o mB      v mB   [  ± mB    s  … mB!   ÷  , mB   ‹  1 mB   ﬂ  5 mB$   Î  @ mB%     F mB(   Û  H mB)   ˆ  K mB,   g  Ω mB0   n  √ mB1   r  « mB4   ü  ı mB8   £  ˘ mB0   ß  ¸ mB1   ©  ˛ mB9   ´    mB5   Ø   mB-   ¥  	 mB<   Ÿ  . mB@   ﬂ  4 mBD   „  8 mB0   Ê  ; mB1   Ë  = mBE   Í  ? mBA   Ï  A mBH     Y mB8     \ mB0     ^ mB1   
+  ` mB9     b mBI     d mBL   =  ì mB0   A  ñ mB1   C  ò mBP   a  ∑ mBT   e  ∫ mBX   i  æ mB\   l  ¬ mB0   q  « mB1   s  … mB]   v  À mBY   x  Õ mBU   z  œ mBQ   {  — mBM     ‘ mB`   Ü  ‹ mBd   ä  ﬂ mBh   Ø   mB0   ≥  	 mB1   ∂   mBi   ∏   mBe   ∫   mBa   º   mBL   ÷  , mB0   Ÿ  . mB1   €  0 mBP   Ò  F mBT   Û  H mBX   ı  K mB\   ¯  M mB0   ˙  O mB1   ¸  Q mB]   ˛  S mBY      U mBU     W mBQ     Y mBM     [ mB`     ^ mBd     ` mBh   %  z mB0   (  } mB1   *   mBi   ,  Å mBe   .  É mBa   0  Ö mBl   X  ≠ mB0   [  ∞ mB1   ]  ≤ mBm   `  µ mB=   b  ∑ mBp   Ü  ‹ mBt   ß  ˝ mBx   ¨   mB0   Ø   mB1   ±   mBy   ¥  
+ mBu   ∑   mBq   º   mB|   Ÿ  / mBÄ   ·  6 mBÑ   Í  @ mB0   Ó  C mB1     E mBÖ   Ú  G mBà     b mBâ     f mB4     h mB8     k mB0     m mB1     o mB9     q mB5     s mBL   5  ã mB0   8  ç mB1   :  è mBP   Q  ¶ mBT   S  © mBX   V  ´ mB\   X  ≠ mB0   Z  ∞ mB1   \  ≤ mB]   ^  ¥ mBY   `  µ mBU   b  ∑ mBQ   d  π mBM   f  ª mBå   Å  ◊ mBê   Ö  € mBD   à  › mB0   ä  ﬂ mB1   å  ‚ mBE   é  ‰ mBë   ê  Ê mBî   ™    mBò   Æ   mB0   ±   mB1   ≥  	 mBô   µ   mBï   ∏   mBç   ª   mB`   æ   mBd   ¿   mBh   ÷  , mB0   Ÿ  . mB1   €  1 mBi   ›  3 mBe   ﬂ  5 mBa   ·  7 mBú   Í  ? mB†     F mB°   Ù  I mBù   ˆ  K mBÅ   ˙  O mB}   ¸  Q mB§   ˇ  T mB®   	  ] mB¨   
+	  _ mB∞   	  b mB¥   	  e mB∏   	  i mBº   !	  w mBΩ   *	  Ä mBπ   -	  Ç mB¿   5	  ä mB¡   =	  í mBƒ   @	  ï mB≈   G	  ú mBµ   I	  û mB±   K	  † mB»   T	  © mBÃ   W	  ≠ mB–   {	  – mBê   	  ‘ mBD   Å	  ◊ mB0   Ñ	  Ÿ mB1   Ü	  € mBE   à	  › mBë   ä	  ﬂ mB—   å	  · mBÕ   é	  „ mB‘   î	  Í mBÿ   ∞	   mB‹   ¥	  	 mB0   ∑	   mB1   π	   mB›   ¿	   mBŸ   ¬	   mB’   ƒ	   mB…   ∆	   mB‡   Õ	  # mB·   –	  % mB‰   ”	  ( mBË   ÿ	  . mBÏ   ‹	  1 mB   ﬂ	  4 mBÒ   ·	  7 mB¿   Á	  < mB¡   Ï	  A mBÙ   Ô	  D mBı   Ú	  G mBƒ   Ù	  I mB≈   ˆ	  L mB¯   ˘	  N mB˘   ˚	  Q mBÌ   ˝	  S mBÈ    
+  U mBÂ   
+  W mB≠   
+  Y mB©   
+  [ mB•   
+  ] mB¸   *
+  Ä mB   -
+  É mB0   1
+  Ü mB1   3
+  â mB  r
+   mBD   w
+   mB0   y
+   mB1   |
+   mBE   ~
+   mB  °
+  ? mB  ®
+  F mB˝   ™
+  H mB   Æ
+  L mB  €
+  z mB  ‡
+  ~ mB  Ú
+  ê mB0   ı
+  ì mB1   ¯
+  ñ mB  #  ∆ mB0   &  … mB1   (  À mB  *  Õ mB  B  Â mB0   D  Á mB1   G  È mB  I  Î mB  L  Ó mB  q   mB  x   mB   {   mB$    " mB(  Ç  $ mB0   Ñ  ' mB1   Ü  ) mB)  ã  - mB%  ç  / mB!  è  1 mB  ë  4 mB,  ™  M mB0  Æ  Q mB4  ±  S mB0   ≥  V mB1   µ  X mB5  ∑  Z mB1  π  \ mB-  ª  ^ mB8  ﬁ  Ç mB<  Ê  â mB0   Ë  ã mB1   Î  ç mB=  Ô  ë mB9  Ò  ì mB  Û  ï mB  ı  ó mB	  ˆ  ô mB@    ∏ mBD    ª mBH    ø mBI    ¡ mBL  '  … mBP  C  Ê mB0   H  Í mB1   J  Ì mBQ  L  Ô mBT  O  Ú mBX  R  Ù mB\  U  ˜ mB]  [  ˛ mBY  ]    mBU  _   mB`  b   mBd  e   mBh  h   mBi  k   mBe  m   mBl  w   mBp  {   mBq  ~    mBt  Ä  # mBu  É  % mBx  Ö  ( mBp  à  * mBq  ä  - mB|  å  / mB}  è  2 mBt  ë  4 mBu  ì  6 mBÄ  ñ  8 mBÑ  ô  ; mBº   •  H mBΩ   ©  L mBÖ  ¨  O mBÅ  Æ  Q mBà  …  l mBX   Õ  p mB\   –  r mB0   “  u mB1   ‘  w mB]   ÷  y mBY   ÿ  { mB¯   €  ~ mB˘   ›  Ä mBå  ‡  É mBç  „  Ö mBê  Î  ç mBî    ¬ mBò  #  ∆ mB0   &  » mB1   (    mBô  E  Á mBï  G  Í mBú  Q  Ù mB†  W  ˙ mB§  \  ˇ mB•  _   mB®  b   mB©  e   mB¨  i   mB§  l   mB•  n   mB∞  {   mB±  Å  # mB≠  É  & mB°  Ö  ( mBù  á  * mB¥  ã  - mB∏  è  2 mBº  ñ  9 mBΩ  õ  > mBº   †  B mBΩ   £  F mBπ  •  H mBµ  ß  J mB¿  ™  M mBƒ  ≠  P mB»  Ÿ  | mB…  ›  Ä mB®  ‡  É mB©  „  Ü mBÃ  Ê  â mBÕ  Ï  é mB≈  Ó  ë mB¡    ì mB–  Û  ñ mB‘     £ mB’  &  … mB—  )  Ã mBÿ  ,  œ mB0   /  “ mB1   1  ‘ mB0   K  Ì mB1   M   mB0   g  
+ mB1   i   mB‹  m   mB¿   r   mB¡   v   mB‡  z   mB‰  |   mBË  Ä  # mBÈ  É  & mBÏ  ä  - mBÌ  ê  3 mBÂ  ì  6 mB·  ñ  9 mB  ö  = mBÒ  ü  A mBÙ  °  D mBı  §  F mB¯  ß  J mB˘  ©  L mB¸  ¨  O mB   Ø  R mB  ≥  U mB  µ  X mB  ∏  Z mB˝  ∫  ] mB  Ω  _ mB  ø  b mB  ¬  e mB  ∆  i mB  ‰  á mB0   Á  ä mB1   Í  å mB  Ï  é mB  Ì  ê mB	    ì mB  Û  ñ mB  ˚  û mB›  ˝  † mBŸ     ¢ mBë    § mBâ    ® mB∞     ´ mB¥     Æ mB∏     ∞ mBº     ∂ mBΩ     ∫ mBπ     Ω mB¿     ¡ mB¡   #  ≈ mBƒ   &  » mB≈   (  À mBµ   *  Õ mB±   ,  œ mBp  .  — mBq  1  ” mB|  3  ’ mB}  5  ÿ mB  7  ⁄ mB  9  ‹ mB  =  ‡ mB   A  „ mB$  D  Ê mB(  G  Í mB,  K  Ì mB0  R  ı mB1  X  ˙ mB-  Z  ˝ mB)  \  ˇ mB%  ^   mB4  b   mB8  e   mB9  ä  - mB<  é  1 mB@  ±  T mB0   ¥  W mB1   ∂  Y mBA  ∫  \ mB=  º  ^ mBD  ¿  c mBE  ¬  e mB5  ƒ  g mB!  ∆  i mB  …  k mBH  Ã  n mBL  œ  q mBM  —  t mBI  ”  v mB‰   ÷  y mBË   ÿ  { mBÏ   €  } mB   ›  Ä mBÒ   ﬂ  Ç mB¿   Â  à mB¡   Í  å mBÙ   Ì  è mBı   Ô  í mBƒ   Ò  î mB≈   Û  ñ mB¯   ı  ò mB˘   ¯  ö mBÌ   ˘  ú mBÈ   ¸  û mBÂ   ˛  † mBP    £ mBT    ß mBU  
+  ≠ mBX    ≥ mBY  Â#  \3 mBQ  ˇ#  s3 mBy  $  |3 mBm  $  Å3 mBa  $  á3 mBM  $  å3 mBE  $  ë3 mBA   $  ï3 mB\  *$  ü3 mB`  I$  Ω3 
