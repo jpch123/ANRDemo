@@ -19,8 +19,75 @@ public class ReadFile {
             while ((line = bufReader.readLine()) != null) {
 //                sb.append(line);
             }
-            Log.d(TAG, "2 " + Thread.currentThread().getName());
-            return sb.toString();
+//            Log.d(TAG, "2 " + Thread.currentThread().getName());
+//            return sb.toString();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        try {
+            InputStreamReader inputReader = new InputStreamReader(activity.getResources().getAssets().open(fileName));
+            BufferedReader bufReader = new BufferedReader(inputReader);
+            String line = "";
+            StringBuffer sb = new StringBuffer();
+            while ((line = bufReader.readLine()) != null) {
+//                sb.append(line);
+            }
+//            Log.d(TAG, "2 " + Thread.currentThread().getName());
+//            return sb.toString();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        try {
+            InputStreamReader inputReader = new InputStreamReader(activity.getResources().getAssets().open(fileName));
+            BufferedReader bufReader = new BufferedReader(inputReader);
+            String line = "";
+            StringBuffer sb = new StringBuffer();
+            while ((line = bufReader.readLine()) != null) {
+//                sb.append(line);
+            }
+//            Log.d(TAG, "2 " + Thread.currentThread().getName());
+//            return sb.toString();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            InputStreamReader inputReader = new InputStreamReader(activity.getResources().getAssets().open(fileName));
+            BufferedReader bufReader = new BufferedReader(inputReader);
+            String line = "";
+            StringBuffer sb = new StringBuffer();
+            while ((line = bufReader.readLine()) != null) {
+//                sb.append(line);
+            }
+//            Log.d(TAG, "2 " + Thread.currentThread().getName());
+//            return sb.toString();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            InputStreamReader inputReader = new InputStreamReader(activity.getResources().getAssets().open(fileName));
+            BufferedReader bufReader = new BufferedReader(inputReader);
+            String line = "";
+            StringBuffer sb = new StringBuffer();
+            while ((line = bufReader.readLine()) != null) {
+//                sb.append(line);
+            }
+//            Log.d(TAG, "2 " + Thread.currentThread().getName());
+//            return sb.toString();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            InputStreamReader inputReader = new InputStreamReader(activity.getResources().getAssets().open(fileName));
+            BufferedReader bufReader = new BufferedReader(inputReader);
+            String line = "";
+            StringBuffer sb = new StringBuffer();
+            while ((line = bufReader.readLine()) != null) {
+//                sb.append(line);
+            }
+//            Log.d(TAG, "2 " + Thread.currentThread().getName());
+//            return sb.toString();
         } catch (Exception e) {
             e.printStackTrace();
         }
