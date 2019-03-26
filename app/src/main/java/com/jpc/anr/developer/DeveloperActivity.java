@@ -1,6 +1,8 @@
 package com.jpc.anr.developer;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Debug;
@@ -25,7 +27,12 @@ public class DeveloperActivity extends AppCompatActivity {
     Button btn_4;
     Button btn_5;
     Button btn_6;
+    Button btn_7;
+    Button btn_8;
+    Button btn_9;
+    Button btn_10;
     Activity mActivity;
+    MyBroadCastReceiver mMyBroadCastReceiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +53,22 @@ public class DeveloperActivity extends AppCompatActivity {
         btn_5.setOnClickListener(mClickListener);
         btn_6 = findViewById(R.id.btn_6);
         btn_6.setOnClickListener(mClickListener);
+
+        btn_7 = findViewById(R.id.btn_7);
+        btn_7.setOnClickListener(mClickListener);
+        btn_8 = findViewById(R.id.btn_8);
+        btn_8.setOnClickListener(mClickListener);
+        btn_9 = findViewById(R.id.btn_9);
+        btn_9.setOnClickListener(mClickListener);
+        btn_10 = findViewById(R.id.btn_10);
+        btn_10.setOnClickListener(mClickListener);
+
+        //实例化IntentFilter对象
+        IntentFilter filter = new IntentFilter();
+        filter.addAction("com.jpc.anr.MyBroadCastReceiver");
+        mMyBroadCastReceiver = new MyBroadCastReceiver();
+        //注册广播接收
+        registerReceiver(mMyBroadCastReceiver, filter);
     }
 
     View.OnClickListener mClickListener = new View.OnClickListener() {
@@ -109,6 +132,35 @@ public class DeveloperActivity extends AppCompatActivity {
                     }
                     Toast.makeText(mActivity, "哈哈11", Toast.LENGTH_SHORT).show();
                     break;
+
+                case R.id.btn_7: {
+                    Intent broadCast1 = new Intent();
+                    broadCast1.setAction("com.jpc.anr.MyBroadCastReceiver");
+                    broadCast1.putExtra("type", 1);
+                    mActivity.sendBroadcast(broadCast1);
+                }
+                break;
+                case R.id.btn_8: {
+                    Intent broadCast1 = new Intent();
+                    broadCast1.setAction("com.jpc.anr.MyBroadCastReceiver");
+                    broadCast1.putExtra("type", 2);
+                    mActivity.sendBroadcast(broadCast1);
+                }
+                break;
+                case R.id.btn_9: {
+                    Intent broadCast1 = new Intent();
+                    broadCast1.setAction("com.jpc.anr.MyBroadCastReceiver");
+                    broadCast1.putExtra("type", 3);
+                    mActivity.sendBroadcast(broadCast1);
+                }
+                break;
+                case R.id.btn_10: {
+                    Intent broadCast1 = new Intent();
+                    broadCast1.setAction("com.jpc.anr.MyBroadCastReceiver");
+                    broadCast1.putExtra("type", 4);
+                    mActivity.sendBroadcast(broadCast1);
+                }
+                break;
             }
         }
     };
@@ -137,5 +189,11 @@ public class DeveloperActivity extends AppCompatActivity {
                 return null;
             }
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(mMyBroadCastReceiver);
     }
 }

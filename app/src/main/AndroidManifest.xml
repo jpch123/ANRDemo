@@ -24,6 +24,7 @@
         <activity
             android:name=".developer.DeveloperActivity"
             android:label="DeveloperActivity" />
+        <service android:name=".developer.MyIntentService"/>
     </application>
 
 </manifest>
